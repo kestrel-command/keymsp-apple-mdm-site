@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apple Business Manager + MDM for SMBs | KeyMSP</title>
+  <meta name="description" content="KeyMSP helps small and midsize businesses deploy and manage Macs, iPhones, and iPads with Apple Business Manager and MDM, so devices stay secure, controlled, and ready for work.">
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:#111b2e;
+      --panel-2:#16233a;
+      --text:#ebf1f8;
+      --muted:#a7b7ca;
+      --line:rgba(255,255,255,.09);
+      --accent:#53b3ff;
+      --accent-2:#8de1ff;
+      --good:#91e6a7;
+      --shadow:0 24px 70px rgba(0,0,0,.35);
+      --radius:22px;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:linear-gradient(180deg,#09111d 0%,#0b1220 100%);color:var(--text);line-height:1.55}
+    a{color:inherit}
+    img{max-width:100%;display:block}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+    .section{padding:84px 0}
+    .eyebrow{display:inline-flex;gap:10px;align-items:center;padding:10px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.04);color:var(--accent-2);font-size:13px;letter-spacing:.02em}
+    h1,h2,h3{line-height:1.08;margin:0 0 18px}
+    h1{font-size:clamp(2.5rem,6vw,5.15rem);letter-spacing:-.04em;max-width:12ch}
+    h2{font-size:clamp(1.9rem,3vw,3rem);letter-spacing:-.03em}
+    h3{font-size:1.25rem}
+    p{margin:0 0 16px;color:var(--muted)}
+    .hero{padding:34px 0 70px}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0 12px}
+    .brand{font-weight:800;letter-spacing:.01em}
+    .brand span{color:var(--accent)}
+    .cta, .button-secondary{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 20px;border-radius:14px;text-decoration:none;font-weight:700;transition:.2s ease}
+    .cta{background:linear-gradient(135deg,var(--accent),#2d7fff);color:white;box-shadow:0 10px 35px rgba(52,132,255,.35)}
+    .button-secondary{border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--text)}
+    .cta:hover,.button-secondary:hover{transform:translateY(-1px)}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .95fr;gap:34px;align-items:center;padding-top:34px}
+    .panel{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero-copy .actions{display:flex;gap:14px;flex-wrap:wrap;margin:28px 0 30px}
+    .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .stat{padding:18px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.03)}
+    .stat strong{display:block;font-size:1.6rem;margin-bottom:6px;color:white}
+    .hero-art{overflow:hidden}
+    .hero-art img{height:100%;width:100%;object-fit:cover;min-height:470px}
+    .grid-3,.grid-2,.pricing,.faq,.use-cases{display:grid;gap:18px}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .card{padding:28px}
+    .card ul{padding-left:18px;margin:14px 0 0;color:var(--muted)}
+    .card li{margin:0 0 10px}
+    .problem-list{display:grid;gap:12px;margin-top:20px}
+    .problem-item,.check{display:flex;gap:12px;align-items:flex-start;padding:16px 18px;border-radius:16px;background:rgba(255,255,255,.03);border:1px solid var(--line)}
+    .check-dot,.problem-dot{width:11px;height:11px;border-radius:999px;flex:0 0 auto;margin-top:7px}
+    .problem-dot{background:#ff8d8d}
+    .check-dot{background:var(--good)}
+    .split-visual{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center}
+    .device-stack{padding:28px}
+    .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+    .step{padding:22px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.03)}
+    .step .num{display:inline-flex;width:34px;height:34px;border-radius:999px;align-items:center;justify-content:center;background:rgba(83,179,255,.16);color:var(--accent-2);font-weight:700;margin-bottom:16px}
+    .pricing .tier{display:flex;flex-direction:column;gap:16px;padding:28px;position:relative}
+    .tier.featured{border-color:rgba(83,179,255,.55);background:linear-gradient(180deg,rgba(83,179,255,.12),rgba(255,255,255,.03))}
+    .price{font-size:2rem;font-weight:800;color:#fff}
+    .tiny{font-size:.95rem;color:var(--muted)}
+    .badge{position:absolute;right:20px;top:20px;padding:8px 10px;border-radius:999px;background:rgba(83,179,255,.15);color:var(--accent-2);font-size:.78rem;font-weight:700}
+    .faq .q{padding:24px}
+    .cta-band{padding:34px;background:linear-gradient(135deg,rgba(83,179,255,.12),rgba(141,225,255,.08));display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+    footer{padding:36px 0 60px;color:#89a0b9}
+    @media (max-width:980px){
+      .hero-grid,.split-visual,.grid-3,.grid-2,.pricing,.steps{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr}
+      .hero-art img{min-height:340px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap hero">
+    <div class="nav">
+      <div class="brand">Key<span>MSP</span></div>
+      <a class="button-secondary" href="#contact">Talk to KeyMSP</a>
+    </div>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Apple Business Manager + MDM for growing businesses</div>
+        <h1>Apple devices, business control, fewer headaches.</h1>
+        <p>If your team uses Macs, iPhones, or iPads, Apple Business Manager and MDM can turn messy manual setup into a repeatable business process. KeyMSP designs, enrolls, secures, and manages Apple fleets so devices arrive ready to work and stay company-controlled over time.</p>
+        <div class="actions">
+          <a class="cta" href="#contact">Book an Apple fleet review</a>
+          <a class="button-secondary" href="#pricing">See service options</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>Faster onboarding</strong><span class="tiny">Ship devices to users with enrollment, apps, and baseline settings already staged.</span></div>
+          <div class="stat"><strong>Cleaner offboarding</strong><span class="tiny">Lock, wipe, recover, and reassign business devices without scrambling.</span></div>
+          <div class="stat"><strong>Recurring value</strong><span class="tiny">Ongoing management keeps security, apps, and policy enforcement from drifting.</span></div>
+        </div>
+      </div>
+      <div class="hero-art panel">
+        <img src="assets/hero.png" alt="Professionals using Apple-style business devices with a fleet management backdrop">
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="wrap split-visual">
+      <div>
+        <h2>What usually goes wrong without management</h2>
+        <p>Many SMBs buy Apple devices one at a time, hand them to employees, and hope policies stick. That works, until the team grows or someone leaves.</p>
+        <div class="problem-list">
+          <div class="problem-item"><span class="problem-dot"></span><div>Every new device gets set up manually, differently, and slowly.</div></div>
+          <div class="problem-item"><span class="problem-dot"></span><div>Employees install whatever they want, creating risk and support drift.</div></div>
+          <div class="problem-item"><span class="problem-dot"></span><div>Offboarding is messy, especially when business data lives on user devices.</div></div>
+          <div class="problem-item"><span class="problem-dot"></span><div>There is no clean way to enforce settings, deploy apps, or prove control.</div></div>
+        </div>
+      </div>
+      <div class="panel device-stack">
+        <h3>KeyMSP fixes the operational gap</h3>
+        <div class="check"><span class="check-dot"></span><div>Enroll newly purchased Apple hardware into your business tenant</div></div>
+        <div class="check"><span class="check-dot"></span><div>Apply device restrictions, security settings, and standard app bundles</div></div>
+        <div class="check"><span class="check-dot"></span><div>Retain company control over business-owned Macs, iPhones, and iPads</div></div>
+        <div class="check"><span class="check-dot"></span><div>Support lifecycle tasks like reissue, wipe, lock, and replacement coordination</div></div>
+        <div class="check"><span class="check-dot"></span><div>Give leadership a repeatable, margin-friendly IT process instead of reactive setup work</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>What Apple Business Manager + MDM actually gives your business</h2>
+      <p>Think of Apple Business Manager as the ownership and enrollment layer, and MDM as the control layer. Together, they let your business claim devices, provision them consistently, and keep them aligned with policy after they are deployed.</p>
+      <div class="grid-3" style="margin-top:26px">
+        <div class="panel card">
+          <h3>Centralized enrollment</h3>
+          <p>New Apple devices can be tied to your business and automatically enrolled into management during setup.</p>
+        </div>
+        <div class="panel card">
+          <h3>Controlled app delivery</h3>
+          <p>Push approved applications, remove unwanted ones where supported, and standardize what employees see on day one.</p>
+        </div>
+        <div class="panel card">
+          <h3>Security and restriction baselines</h3>
+          <p>Enforce passcode requirements, device settings, company accounts, and business restrictions from one system.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split-visual">
+      <div class="panel hero-art">
+        <img src="assets/lifecycle.png" alt="Illustration showing managed lifecycle of business mobile devices and laptops">
+      </div>
+      <div>
+        <h2>What KeyMSP manages for you</h2>
+        <div class="grid-2" style="margin-top:22px">
+          <div class="panel card"><h3>Enrollment and tenant setup</h3><p>Apple Business Manager setup, reseller/device enrollment alignment, and MDM foundation design.</p></div>
+          <div class="panel card"><h3>Policy design</h3><p>Baseline security, restrictions, app catalogs, naming standards, and role-based device profiles.</p></div>
+          <div class="panel card"><h3>Ongoing operations</h3><p>New device rollout, reassignments, offboarding actions, lost-device response, and policy updates.</p></div>
+          <div class="panel card"><h3>User experience support</h3><p>We help keep provisioning efficient while reducing admin burden on leadership and internal staff.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Four moments where management pays for itself</h2>
+      <div class="steps" style="margin-top:28px">
+        <div class="step"><div class="num">1</div><h3>New hire starts Monday</h3><p>The MacBook or iPhone can arrive pre-enrolled, with the right apps and settings already assigned.</p></div>
+        <div class="step"><div class="num">2</div><h3>Standard app rollout</h3><p>Need a password manager, line-of-business app, or VPN everywhere? Push it consistently instead of handling one-offs.</p></div>
+        <div class="step"><div class="num">3</div><h3>Lost device</h3><p>Respond quickly with lock, wipe, status review, and documented business handling steps.</p></div>
+        <div class="step"><div class="num">4</div><h3>Employee departure</h3><p>Offboarding gets cleaner when devices remain associated with the business and can be reset for reuse.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Best fit for businesses like these</h2>
+      <div class="grid-3" style="margin-top:26px">
+        <div class="panel card"><h3>Professional services firms</h3><p>Law firms, accounting teams, consultants, and agencies that need a polished employee experience with business control.</p></div>
+        <div class="panel card"><h3>Distributed teams</h3><p>Organizations shipping devices to remote or hybrid employees who need predictable setup without onsite IT.</p></div>
+        <div class="panel card"><h3>Growing SMBs</h3><p>Companies that are beyond ad hoc setup, but not large enough to justify a dedicated Apple admin in-house.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="pricing">
+    <div class="wrap">
+      <h2>Suggested service packaging</h2>
+      <p>This is where the margin is. The setup project gets the foundation in place, but the recurring value comes from ongoing fleet operations, policy changes, app management, offboarding, and business accountability.</p>
+      <div class="pricing" style="grid-template-columns:repeat(3,minmax(0,1fr));margin-top:26px">
+        <div class="panel tier">
+          <h3>Foundation Project</h3>
+          <div class="price">One-time rollout</div>
+          <p>Ideal for getting Apple Business Manager, enrollment, and initial MDM structure set up correctly.</p>
+          <ul>
+            <li>ABM tenant setup or cleanup</li>
+            <li>MDM platform configuration</li>
+            <li>Enrollment and baseline policy design</li>
+            <li>Pilot device testing and documentation</li>
+          </ul>
+        </div>
+        <div class="panel tier featured">
+          <div class="badge">Best recurring value</div>
+          <h3>Managed Apple Fleet</h3>
+          <div class="price">Monthly management</div>
+          <p>For businesses that want KeyMSP to actively run enrollment, app deployment, policy changes, and lifecycle operations.</p>
+          <ul>
+            <li>Per-device or per-user administration</li>
+            <li>Standard app and settings management</li>
+            <li>Onboarding and offboarding workflows</li>
+            <li>Lost device response coordination</li>
+            <li>Quarterly review and optimization</li>
+          </ul>
+        </div>
+        <div class="panel tier">
+          <h3>Apple Security Add-Ons</h3>
+          <div class="price">Layer as needed</div>
+          <p>Expand into stronger control, compliance, support, or security where the client needs more maturity.</p>
+          <ul>
+            <li>Conditional access integration</li>
+            <li>Advanced restrictions and kiosk/shared mode setup</li>
+            <li>Executive/VIP device handling</li>
+            <li>Procurement and refresh coordination</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Frequently asked questions</h2>
+      <div class="faq" style="grid-template-columns:repeat(2,minmax(0,1fr));margin-top:24px">
+        <div class="panel q"><h3>Do we need to be a big company for this?</h3><p>No. This is often most valuable for SMBs because they feel the pain of inconsistent provisioning earlier, but usually do not have a dedicated Apple admin.</p></div>
+        <div class="panel q"><h3>Can you manage iPhones, iPads, and Macs together?</h3><p>Yes. The point is to create a consistent business process across Apple device types, not treat each one as a separate fire drill.</p></div>
+        <div class="panel q"><h3>Can you control what gets installed?</h3><p>Yes, within the capabilities of the chosen MDM platform and device ownership model. We can help standardize approved apps and restrictions around business-owned devices.</p></div>
+        <div class="panel q"><h3>Is this only for brand-new devices?</h3><p>No, although new purchases are the easiest time to build a clean enrollment path. Existing fleets can often be brought under management as part of a structured project.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap panel cta-band">
+      <div>
+        <h2 style="margin-bottom:10px">Want Apple devices to feel easy for staff and controlled for the business?</h2>
+        <p style="max-width:720px">KeyMSP can design the enrollment path, configure the management stack, and run the ongoing operational work so your Apple environment stays clean, secure, and supportable.</p>
+      </div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <a class="cta" href="mailto:randy@keymsp.com?subject=Apple%20Business%20Manager%20%2B%20MDM%20Review">Email KeyMSP</a>
+        <a class="button-secondary" href="tel:+16193243901">Call (619) 324-3901</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">KeyMSP, practical Apple device management for growing businesses.</div>
+  </footer>
+</body>
+</html>
