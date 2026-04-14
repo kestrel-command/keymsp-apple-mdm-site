@@ -7,47 +7,51 @@
   <meta name="description" content="KeyMSP helps small and midsize businesses deploy and manage Macs, iPhones, and iPads with Apple Business Manager and MDM, so devices stay secure, controlled, and ready for work.">
   <style>
     :root{
-      --bg:#0b1220;
-      --panel:#111b2e;
-      --panel-2:#16233a;
-      --text:#ebf1f8;
-      --muted:#a7b7ca;
-      --line:rgba(255,255,255,.09);
-      --accent:#53b3ff;
-      --accent-2:#8de1ff;
-      --good:#91e6a7;
-      --shadow:0 24px 70px rgba(0,0,0,.35);
+      --bg:#f7f8fb;
+      --surface:#ffffff;
+      --surface-2:#eef4ff;
+      --ink:#1f2937;
+      --muted:#5f6b7a;
+      --line:#dfe6ef;
+      --accent:#2764ff;
+      --accent-2:#1f9cf0;
+      --accent-3:#e9f2ff;
+      --good:#19a15f;
+      --shadow:0 18px 50px rgba(25,43,74,.10);
       --radius:22px;
       --max:1180px;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:linear-gradient(180deg,#09111d 0%,#0b1220 100%);color:var(--text);line-height:1.55}
+    body{margin:0;font-family:Rubik, Lato, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
     a{color:inherit}
     img{max-width:100%;display:block}
     .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
-    .section{padding:84px 0}
-    .eyebrow{display:inline-flex;gap:10px;align-items:center;padding:10px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.04);color:var(--accent-2);font-size:13px;letter-spacing:.02em}
-    h1,h2,h3{line-height:1.08;margin:0 0 18px}
-    h1{font-size:clamp(2.5rem,6vw,5.15rem);letter-spacing:-.04em;max-width:12ch}
-    h2{font-size:clamp(1.9rem,3vw,3rem);letter-spacing:-.03em}
-    h3{font-size:1.25rem}
+    .section{padding:82px 0}
+    .eyebrow{display:inline-flex;gap:10px;align-items:center;padding:9px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--accent);font-size:13px;font-weight:700;letter-spacing:.02em;box-shadow:var(--shadow)}
+    h1,h2,h3{line-height:1.05;margin:0 0 18px;color:#1b2430}
+    h1{font-size:clamp(2.6rem,6vw,4.8rem);letter-spacing:-.04em;max-width:11ch;font-family:"Barlow Semi Condensed", Rubik, sans-serif}
+    h2{font-size:clamp(2rem,3.5vw,3.3rem);letter-spacing:-.03em;font-family:"Barlow Semi Condensed", Rubik, sans-serif}
+    h3{font-size:1.3rem;font-family:"Barlow Semi Condensed", Rubik, sans-serif}
     p{margin:0 0 16px;color:var(--muted)}
-    .hero{padding:34px 0 70px}
+    .hero{padding:24px 0 66px;background:linear-gradient(180deg,#f4f7fd 0%, #f7f8fb 100%)}
     .nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0 12px}
-    .brand{font-weight:800;letter-spacing:.01em}
+    .brand{font-weight:800;letter-spacing:.01em;font-size:1.15rem}
     .brand span{color:var(--accent)}
-    .cta, .button-secondary{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 20px;border-radius:14px;text-decoration:none;font-weight:700;transition:.2s ease}
-    .cta{background:linear-gradient(135deg,var(--accent),#2d7fff);color:white;box-shadow:0 10px 35px rgba(52,132,255,.35)}
-    .button-secondary{border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--text)}
+    .cta, .button-secondary{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 22px;border-radius:999px;text-decoration:none;font-weight:700;transition:.2s ease}
+    .cta{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:white;box-shadow:0 14px 35px rgba(39,100,255,.22)}
+    .button-secondary{border:1px solid var(--line);background:#fff;color:var(--ink)}
     .cta:hover,.button-secondary:hover{transform:translateY(-1px)}
-    .hero-grid{display:grid;grid-template-columns:1.15fr .95fr;gap:34px;align-items:center;padding-top:34px}
-    .panel{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
-    .hero-copy .actions{display:flex;gap:14px;flex-wrap:wrap;margin:28px 0 30px}
-    .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-    .stat{padding:18px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.03)}
-    .stat strong{display:block;font-size:1.6rem;margin-bottom:6px;color:white}
-    .hero-art{overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;padding-top:34px}
+    .panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero-copy .actions{display:flex;gap:14px;flex-wrap:wrap;margin:28px 0 24px}
+    .trust-points{display:flex;gap:18px;flex-wrap:wrap;color:#3b4a5d;font-weight:600;font-size:.98rem}
+    .trust-points span{display:inline-flex;align-items:center;gap:8px}
+    .dot{width:9px;height:9px;border-radius:999px;background:var(--good);display:inline-block}
+    .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:26px}
+    .stat{padding:20px;border:1px solid var(--line);border-radius:18px;background:#fff}
+    .stat strong{display:block;font-size:1.55rem;margin-bottom:6px;color:#1b2430;font-family:"Barlow Semi Condensed", Rubik, sans-serif}
+    .hero-art{overflow:hidden;background:linear-gradient(180deg,#eef5ff,#ffffff)}
     .hero-art img{height:100%;width:100%;object-fit:cover;min-height:470px}
     .grid-3,.grid-2,.pricing,.faq,.use-cases{display:grid;gap:18px}
     .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -56,23 +60,23 @@
     .card ul{padding-left:18px;margin:14px 0 0;color:var(--muted)}
     .card li{margin:0 0 10px}
     .problem-list{display:grid;gap:12px;margin-top:20px}
-    .problem-item,.check{display:flex;gap:12px;align-items:flex-start;padding:16px 18px;border-radius:16px;background:rgba(255,255,255,.03);border:1px solid var(--line)}
+    .problem-item,.check{display:flex;gap:12px;align-items:flex-start;padding:16px 18px;border-radius:16px;background:#fff;border:1px solid var(--line)}
     .check-dot,.problem-dot{width:11px;height:11px;border-radius:999px;flex:0 0 auto;margin-top:7px}
-    .problem-dot{background:#ff8d8d}
+    .problem-dot{background:#ff7f7f}
     .check-dot{background:var(--good)}
     .split-visual{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center}
-    .device-stack{padding:28px}
+    .device-stack{padding:28px;background:linear-gradient(180deg,#fff,#f9fbff)}
     .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-    .step{padding:22px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.03)}
-    .step .num{display:inline-flex;width:34px;height:34px;border-radius:999px;align-items:center;justify-content:center;background:rgba(83,179,255,.16);color:var(--accent-2);font-weight:700;margin-bottom:16px}
-    .pricing .tier{display:flex;flex-direction:column;gap:16px;padding:28px;position:relative}
-    .tier.featured{border-color:rgba(83,179,255,.55);background:linear-gradient(180deg,rgba(83,179,255,.12),rgba(255,255,255,.03))}
-    .price{font-size:2rem;font-weight:800;color:#fff}
+    .step{padding:24px;border-radius:18px;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow)}
+    .step .num{display:inline-flex;width:36px;height:36px;border-radius:999px;align-items:center;justify-content:center;background:var(--accent-3);color:var(--accent);font-weight:700;margin-bottom:16px}
+    .pricing .tier{display:flex;flex-direction:column;gap:16px;padding:28px;position:relative;background:#fff}
+    .tier.featured{border-color:#bfd4ff;background:linear-gradient(180deg,#f7fbff,#ffffff)}
+    .price{font-size:2rem;font-weight:800;color:#1b2430;font-family:"Barlow Semi Condensed", Rubik, sans-serif}
     .tiny{font-size:.95rem;color:var(--muted)}
-    .badge{position:absolute;right:20px;top:20px;padding:8px 10px;border-radius:999px;background:rgba(83,179,255,.15);color:var(--accent-2);font-size:.78rem;font-weight:700}
-    .faq .q{padding:24px}
-    .cta-band{padding:34px;background:linear-gradient(135deg,rgba(83,179,255,.12),rgba(141,225,255,.08));display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
-    footer{padding:36px 0 60px;color:#89a0b9}
+    .badge{position:absolute;right:20px;top:20px;padding:8px 10px;border-radius:999px;background:var(--accent-3);color:var(--accent);font-size:.78rem;font-weight:700}
+    .faq .q{padding:24px;background:#fff}
+    .cta-band{padding:34px;background:linear-gradient(135deg,#edf4ff,#f8fbff);display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;border:1px solid #d8e6ff}
+    footer{padding:36px 0 60px;color:#607086}
     @media (max-width:980px){
       .hero-grid,.split-visual,.grid-3,.grid-2,.pricing,.steps{grid-template-columns:1fr}
       .stats{grid-template-columns:1fr}
@@ -89,16 +93,21 @@
     <div class="hero-grid">
       <div class="hero-copy">
         <div class="eyebrow">Apple Business Manager + MDM for growing businesses</div>
-        <h1>Apple devices, business control, fewer headaches.</h1>
-        <p>If your team uses Macs, iPhones, or iPads, Apple Business Manager and MDM can turn messy manual setup into a repeatable business process. KeyMSP designs, enrolls, secures, and manages Apple fleets so devices arrive ready to work and stay company-controlled over time.</p>
+        <h1>Apple device management without the chaos.</h1>
+        <p>Your team wants Macs, iPhones, and iPads that just work. Your business needs control over setup, apps, security, and offboarding. KeyMSP helps SMBs use Apple Business Manager and MDM to make Apple devices feel simple for staff and fully manageable for the business.</p>
         <div class="actions">
-          <a class="cta" href="#contact">Book an Apple fleet review</a>
+          <a class="cta" href="#contact">Book Free Discovery Call</a>
           <a class="button-secondary" href="#pricing">See service options</a>
         </div>
+        <div class="trust-points">
+          <span><i class="dot"></i> Flat monthly management options</span>
+          <span><i class="dot"></i> Local support from KeyMSP</span>
+          <span><i class="dot"></i> Better onboarding and offboarding</span>
+        </div>
         <div class="stats">
-          <div class="stat"><strong>Faster onboarding</strong><span class="tiny">Ship devices to users with enrollment, apps, and baseline settings already staged.</span></div>
-          <div class="stat"><strong>Cleaner offboarding</strong><span class="tiny">Lock, wipe, recover, and reassign business devices without scrambling.</span></div>
-          <div class="stat"><strong>Recurring value</strong><span class="tiny">Ongoing management keeps security, apps, and policy enforcement from drifting.</span></div>
+          <div class="stat"><strong>Faster onboarding</strong><span class="tiny">Ship devices with enrollment, apps, and baseline settings already staged.</span></div>
+          <div class="stat"><strong>Cleaner offboarding</strong><span class="tiny">Lock, wipe, recover, and reassign business devices without last-minute scrambling.</span></div>
+          <div class="stat"><strong>Less IT drift</strong><span class="tiny">Keep apps, restrictions, and security settings consistent as the business grows.</span></div>
         </div>
       </div>
       <div class="hero-art panel">
